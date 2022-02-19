@@ -79,13 +79,7 @@ function getFullName(pessoa: {name: string, lastName: string}): string{
 let p = {name: "Rene", lastName: "Padua"}
 console.log(getFullName(p));
 
-//Declarando uma função para ser invocada por um evento
-const btn = document.getElementById("appendButton");
-btn?.addEventListener("click", alertTSMethod);
 
-function alertTsMethod(this: HTMLElement, ev: EVent){
-  alert("Alertando usando typeScript");
-}
 
 
 let counter = 0;
@@ -110,3 +104,11 @@ appDiv.innerHTML = `
 <hr/>
 <button id='appButton' onclick="alertTsMethod">Alertar</button>
 `;
+
+//Declarando uma função para ser invocada por um evento
+const btn = document.getElementById("appendButton");
+btn?.addEventListener("click", alertTSMethod);
+
+function alertTsMethod(this: HTMLElement, ev: EVent){
+  alert("Alertando usando typeScript");
+}
